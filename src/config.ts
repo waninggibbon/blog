@@ -17,7 +17,7 @@ export default {
   description: "nathy mackinlay's personal site",
   lang: "en",
   themes: {
-    dark: "github-dark",
-    light: "github-light",
+    dark: "everforest-dark",
+    light: "everforest-light",
   },
 } satisfies Config;

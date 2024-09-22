@@ -1,25 +1,23 @@
-import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
+import config from "@/config";
 
 export const ThemeToggler = () => {
-  const [theme, setTheme] = useState<"light" | "dark" | "system">("light");
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    element.classList.toggle("dark");
 
-  useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
-    setTheme(isDarkMode ? "dark" : "light");
-  }, []);
+    const isDark = element.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 
-  useEffect(() => {
-    const isDark =
-      theme === "dark" ||
-      (theme === "system" &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
-  }, [theme]);
+    element.setAttribute(
+      "data-theme",
+      config.themes[isDark ? "dark" : "light"]
+    );
+  };
 
   return (
     <>
-      <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+      <button onClick={handleToggleClick}>
         <Sun className="m500:h-4 m500:w-4 stroke-text hidden h-6 w-6 dark:inline" />
         <Moon className="m500:h-4 m500:w-4 stroke-text inline h-6 w-6 dark:hidden" />
         <span className="sr-only">Toggle theme</span>
