@@ -3,6 +3,11 @@ import config from "@/config";
 
 import "@/styles/globals.css";
 import BaseLayer from "../layouts/BaseLayer.astro";
+import { Canvas3D } from "@/components/Canvas3D";
 ---
 
-<BaseLayer meta={{ title: config.title }} />
+<BaseLayer meta={{ title: config.title }}>
+  <div class="flex flex-row h-full w-full">
+    <Canvas3D client:only="react" />
+  </div>
+</BaseLayer>

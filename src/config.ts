@@ -17,7 +17,7 @@ export default {
   description: "nathy mackinlay's personal site",
   lang: "en",
   themes: {
-    dark: "everforest-dark",
-    light: "everforest-light",
+    dark: "dracula",
+    light: "min-light",
   },
 } satisfies Config;

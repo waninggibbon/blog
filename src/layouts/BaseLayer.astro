@@ -42,12 +42,10 @@ const {
     <Meta title={title} description={description} />
     <ViewTransitions />
   </head>
-  <body
-    class="mx-auto max-w-[900px] bg-bg px-5 font-base text-text scrollbar scrollbar-thumb-black dark:bg-darkBg dark:text-darkText dark:scrollbar-thumb-white"
-  >
+  <body class="bg-bg font-base text-text dark:bg-darkBg dark:text-darkText">
     <Nav client:only="react" pathName={Astro.url.pathname} />
     <main
-      class="min-h-[calc(100dvh-70px)] py-10 pt-[120px] w500:min-h-[calc(100dvh-70px)] w400:pt-[140px]"
+      class="mx-auto px-5 max-w-[900px] min-h-[calc(100dvh-70px)] py-10 pt-[120px] w500:min-h-[calc(100dvh-70px)] w400:pt-[140px]"
     >
       <slot />
     </main>

@@ -11,7 +11,7 @@ export default defineConfig({
     react(),
     tailwind(),
     expressiveCode({
-      themes: ["everforest-dark", "everforest-light"],
+      themes: ["dracula", "min-light"],
       styleOverrides: {
         frames: {
           editorActiveTabIndicatorTopColor: "transparent",

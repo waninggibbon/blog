@@ -7,12 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        main: "#bd52eb",
-        mainAccent: "#a81be4", // not needed for shadcn components
+        main: "#FFAA00",
         overlay: "rgba(0,0,0,0.8)", // background color overlay for alert dialogs, modals, etc.
 
         // light mode
-        bg: "#e3dff2",
+        bg: "#fefae0",
         text: "#000",
         border: "#000",
 
@@ -20,10 +19,10 @@ export default {
         darkBg: "#1D1F27",
         darkText: "#eeefe9",
         darkBorder: "#000",
-        secondaryBlack: "#1b1b1b", // opposite of plain white, not used pitch black because borders and box-shadows are that color
+        secondaryBlack: "#1b1b1b",
       },
       borderRadius: {
-        base: "8px",
+        base: "px",
       },
       boxShadow: {
         light: "4px 4px 0px 0px #000",
@@ -41,6 +40,11 @@ export default {
       },
       fontFamily: {
         sans: ["Red Hat Text Variable", ...defaultTheme.fontFamily.sans],
+      },
+      screens: {
+        w700: { max: "700px" },
+        w500: { max: "500px" },
+        w400: { max: "400px" },
       },
     },
   },
