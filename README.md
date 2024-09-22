@@ -1,6 +1,6 @@
 # nathy.dev - blog
 
-The blog & home page for nathy.dev. Made with astro, react, three.js and shadcn ui.
+The blog & home page for nathy.dev. Made with astro, react, three.js and tailwind.
 
 ## 🧞 Commands
 

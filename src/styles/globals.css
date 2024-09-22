@@ -56,3 +56,9 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+@layer base {
+  body {
+    @apply bg-bg text-text dark:bg-darkBg dark:text-darkText;
+  }
+}
