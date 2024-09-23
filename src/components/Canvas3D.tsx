@@ -3,7 +3,7 @@ import { Gameboy } from "./Gameboy";
 
 export const Canvas3D = () => {
   return (
-    <div className="min-h-[calc(80dvh-70px)] w-full relative">
+    <div className="h-full w-full fixed top-0 left-0 z-0">
       <Canvas>
         <Gameboy />
       </Canvas>

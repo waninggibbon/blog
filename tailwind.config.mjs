@@ -10,6 +10,17 @@ export default {
         main: "#FFAA00",
         overlay: "rgba(0,0,0,0.8)", // background color overlay for alert dialogs, modals, etc.
 
+        // themes
+        goblin: "#00FF00",
+
+        paladin: "#0000FF",
+
+        pumpkin: "FFAA00",
+
+        necromancer: "#BB00FF",
+
+        tiefling: "#FF0000",
+
         // light mode
         bg: "#fefae0",
         text: "#000",

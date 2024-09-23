@@ -2,6 +2,8 @@
 import config from "@/config";
 import { getCollection } from "astro:content";
 
+import { Button } from "@/components/ui/button.tsx";
+
 import BaseLayer from "@/layouts/BaseLayer.astro";
 import PostPreview from "@/components/PostPreview.astro";
 
@@ -10,9 +12,12 @@ const sortedPosts = allPosts.sort(
   (a, b) =>
     new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
 );
+
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
 <BaseLayer meta={{ title: config.title }}>
+  <Button className="mb-4"><a href="/tags">Search by topic</a></Button>
   <div class="w700:grid-cols-1 grid grid-cols-2 gap-5">
     {
       sortedPosts.map((post) => (

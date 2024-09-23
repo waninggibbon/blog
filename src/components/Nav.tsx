@@ -4,6 +4,7 @@
 // import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { ThemeToggler } from "./ThemeToggler";
+import { SiteSettings } from "./SiteSettings";
 // import { ThemeSwitcher } from "./theme-switcher";
 
 type Props = {
@@ -46,6 +47,7 @@ export const Nav = ({ pathName }: Props) => {
           );
         })}
         <ThemeToggler />
+        <SiteSettings />
       </nav>
     </div>
   );

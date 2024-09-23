@@ -42,7 +42,9 @@ const {
     <Meta title={title} description={description} />
     <ViewTransitions />
   </head>
-  <body class="bg-bg font-base text-text dark:bg-darkBg dark:text-darkText">
+  <body
+    class="bg-bg font-base text-text dark:bg-darkBg dark:text-darkText z-10"
+  >
     <Nav client:only="react" pathName={Astro.url.pathname} />
     <main
       class="mx-auto px-5 max-w-[900px] min-h-[calc(100dvh-70px)] py-10 pt-[120px] w500:min-h-[calc(100dvh-70px)] w400:pt-[140px]"
