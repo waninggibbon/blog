@@ -1,8 +1,8 @@
 import {
   CircleHelp,
-  Cloud,
-  CreditCard,
-  Github,
+  MonitorCog,
+  Palette,
+  Eclipse,
   Keyboard,
   LifeBuoy,
   LogOut,
@@ -20,7 +20,9 @@ import {
   Wrench,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+
+import config from "@/config";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,6 +39,30 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export const SiteSettings = () => {
+  const handleModeSelection = (mode: "dark" | "light" | "system") => {
+    const preference = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+
+    localStorage.setItem("mode", mode);
+    document.documentElement.setAttribute(
+      "data-mode",
+      config.themes[mode === "system" ? preference : mode]
+    );
+
+    document.documentElement.classList[
+      mode === "dark"
+        ? "add"
+        : mode === "light"
+          ? "remove"
+          : preference === "dark"
+            ? "add"
+            : "remove"
+    ]("dark");
+  };
+
+  const handleThemeSelection = (mode: string) => {};
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -50,21 +76,21 @@ export const SiteSettings = () => {
         <DropdownMenuGroup>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-              <UserPlus className="mr-2 h-4 w-4" />
-              <span>Display preference</span>
+              <MonitorCog className="mr-2 h-4 w-4" />
+              <span>Display</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleModeSelection("light")}>
                   <Sun className="mr-2 h-4 w-4" />
                   <span>Light</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleModeSelection("dark")}>
                   <Moon className="mr-2 h-4 w-4" />
                   <span>Dark</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleModeSelection("system")}>
                   <Wrench className="mr-2 h-4 w-4" />
                   <span>System</span>
                 </DropdownMenuItem>
@@ -73,7 +99,7 @@ export const SiteSettings = () => {
           </DropdownMenuSub>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-              <UserPlus className="mr-2 h-4 w-4" />
+              <Palette className="mr-2 h-4 w-4" />
               <span>Theme</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>

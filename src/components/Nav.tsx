@@ -46,7 +46,6 @@ export const Nav = ({ pathName }: Props) => {
             </a>
           );
         })}
-        <ThemeToggler />
         <SiteSettings />
       </nav>
     </div>

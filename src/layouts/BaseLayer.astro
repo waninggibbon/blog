@@ -14,12 +14,17 @@ const {
 <script>
   import config from "@/config";
 
-  function colorMode() {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+  function displayMode() {
+    const preference = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+
+    const derivedMode =
+      localStorage.mode === "light" || localStorage.mode === "dark"
+        ? localStorage.mode
+        : preference;
+
+    if (derivedMode === "dark") {
       document.documentElement.classList.add("dark");
       document.documentElement.setAttribute(
         "data-theme",
@@ -34,8 +39,8 @@ const {
     }
   }
 
-  colorMode();
-  document.addEventListener("astro:after-swap", colorMode);
+  displayMode();
+  document.addEventListener("astro:after-swap", displayMode);
 </script>
 <html lang="en">
   <head>
