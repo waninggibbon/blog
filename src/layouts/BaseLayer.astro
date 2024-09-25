@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import "../styles/globals.css";
 
 import Meta from "@/components/Meta.astro";
 
@@ -28,15 +29,18 @@ const {
       document.documentElement.classList.add("dark");
       document.documentElement.setAttribute(
         "data-theme",
-        config.themes.dark as string
+        config.modes.dark as string
       );
     } else {
       document.documentElement.classList.remove("dark");
       document.documentElement.setAttribute(
         "data-theme",
-        config.themes.light as string
+        config.modes.light as string
       );
     }
+
+    const theme = localStorage.theme ?? config.theme;
+    if (theme) document.documentElement.classList.add(theme);
   }
 
   displayMode();

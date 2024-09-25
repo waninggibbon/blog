@@ -7,30 +7,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        main: "#FFAA00",
+        main: "var(--main)",
         overlay: "rgba(0,0,0,0.8)", // background color overlay for alert dialogs, modals, etc.
 
-        // themes
-        goblin: "#00FF00",
-
-        paladin: "#0000FF",
-
-        pumpkin: "FFAA00",
-
-        necromancer: "#BB00FF",
-
-        tiefling: "#FF0000",
-
         // light mode
-        bg: "#fefae0",
+        bg: "var(--bg)",
         text: "#000",
         border: "#000",
 
         // dark mode
-        darkBg: "#1D1F27",
+        darkBg: "var(--darkBg)",
         darkText: "#eeefe9",
         darkBorder: "#000",
         secondaryBlack: "#1b1b1b",
+
+        // themes
+        goblin: "#00FF00",
+        paladin: "#00e1ff",
+        necromancer: "#bd52eb",
+        tiefling: "#FF0000",
+        barbarian: "#ffaa00",
       },
       borderRadius: {
         base: "px",

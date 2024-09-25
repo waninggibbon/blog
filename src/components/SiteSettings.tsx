@@ -22,6 +22,8 @@ import {
 
 import { useState, useEffect } from "react";
 
+//set primary color in css variables set by class
+
 import config from "@/config";
 import {
   DropdownMenu,
@@ -47,7 +49,7 @@ export const SiteSettings = () => {
     localStorage.setItem("mode", mode);
     document.documentElement.setAttribute(
       "data-mode",
-      config.themes[mode === "system" ? preference : mode]
+      config.modes[mode === "system" ? preference : mode]
     );
 
     document.documentElement.classList[
@@ -61,7 +63,29 @@ export const SiteSettings = () => {
     ]("dark");
   };
 
-  const handleThemeSelection = (mode: string) => {};
+  const handleThemeSelection = (theme: string) => {
+    const prev = localStorage.getItem("theme") ?? config.theme;
+    if (theme !== "random") {
+      localStorage.setItem("theme", theme);
+
+      document.documentElement.classList.add(theme);
+      document.documentElement.classList.remove(prev);
+      return;
+    }
+
+    const themes = [
+      "barbarian",
+      "paladin",
+      "goblin",
+      "necromancer",
+      "tiefling",
+    ].filter((theme) => theme != prev);
+
+    const randomTheme = themes[Math.floor(Math.random() * themes.length)];
+    localStorage.setItem("theme", randomTheme);
+    document.documentElement.classList.add(randomTheme);
+    document.documentElement.classList.remove(prev);
+  };
 
   return (
     <DropdownMenu>
@@ -89,7 +113,6 @@ export const SiteSettings = () => {
                   <Moon className="mr-2 h-4 w-4" />
                   <span>Dark</span>
                 </DropdownMenuItem>
-                <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => handleModeSelection("system")}>
                   <Wrench className="mr-2 h-4 w-4" />
                   <span>System</span>
@@ -104,28 +127,41 @@ export const SiteSettings = () => {
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleThemeSelection("goblin")}
+                >
                   <div className="mr-2 h-4 w-4 border-text border-2 bg-goblin rounded-full" />
                   <span>Goblin</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleThemeSelection("paladin")}
+                >
                   <div className="mr-2 h-4 w-4 border-text border-2 bg-paladin rounded-full" />
                   <span>Paladin</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleThemeSelection("necromancer")}
+                >
                   <div className="mr-2 h-4 w-4 border-text border-2 bg-necromancer rounded-full" />
                   <span>Necromancer</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleThemeSelection("tiefling")}
+                >
                   <div className="mr-2 h-4 w-4 border-text border-2 bg-tiefling rounded-full" />
                   <span>Tiefling</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <div className="mr-2 h-4 w-4 border-text border-2 bg-pumpkin rounded-full" />
-                  <span>Pumpkin</span>
+                <DropdownMenuItem
+                  onClick={() => handleThemeSelection("barbarian")}
+                >
+                  <div className="mr-2 h-4 w-4 border-text border-2 bg-barbarian rounded-full" />
+                  <span>Barbarian</span>
                 </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => {
+                    handleThemeSelection("random");
+                  }}
+                >
                   <Shuffle className="mr-2 h-4 w-4" />
                   <span>Random</span>
                 </DropdownMenuItem>

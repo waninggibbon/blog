@@ -5,10 +5,11 @@ type Config = {
   title: string;
   description: string;
   lang: string;
-  themes: {
+  modes: {
     dark: ThemeObjectOrShikiThemeName;
     light: ThemeObjectOrShikiThemeName;
   };
+  theme: string;
 };
 
 export default {
@@ -16,8 +17,9 @@ export default {
   title: "nathy.dev",
   description: "nathy mackinlay's personal site",
   lang: "en",
-  themes: {
+  modes: {
     dark: "dracula",
     light: "min-light",
   },
+  theme: "barbarian",
 } satisfies Config;

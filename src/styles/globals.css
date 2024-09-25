@@ -28,6 +28,10 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    --main: #ffaa00;
+    --bg: #fefae0;
+    --darkBg: #1d1f27;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -54,6 +58,36 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+  }
+
+  .goblin {
+    --main: #00ff00;
+    --bg: #ccffcc;
+    --darkBg: #002907;
+  }
+
+  .paladin {
+    --main: #00e1ff;
+    --bg: #dfe5f2;
+    --darkBg: #272933;
+  }
+
+  .barbarian {
+    --main: #ffaa00;
+    --bg: #fefae0;
+    --darkBg: #1d1f27;
+  }
+
+  .necromancer {
+    --main: #bd52eb;
+    --bg: #e3dff2;
+    --darkBg: #111903;
+  }
+
+  .tiefling {
+    --main: #ff0000;
+    --bg: #ffc2c2;
+    --darkBg: #3d0000;
   }
 }
 
