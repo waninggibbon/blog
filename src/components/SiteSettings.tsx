@@ -48,7 +48,7 @@ export const SiteSettings = () => {
 
     localStorage.setItem("mode", mode);
     document.documentElement.setAttribute(
-      "data-mode",
+      "data-theme",
       config.modes[mode === "system" ? preference : mode]
     );
 
