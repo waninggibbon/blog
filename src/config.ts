@@ -21,5 +21,5 @@ export default {
     dark: "dracula",
     light: "min-light",
   },
-  theme: "barbarian",
+  theme: "goblin",
 } satisfies Config;

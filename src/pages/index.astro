@@ -3,19 +3,17 @@ import config from "@/config";
 
 import "@/styles/globals.css";
 import BaseLayer from "../layouts/BaseLayer.astro";
-import { Canvas3D } from "@/components/Canvas3D";
 ---
 
 <BaseLayer meta={{ title: config.title }}>
   <div class="flex flex-row h-full w-full">
-    <Canvas3D client:only="react" />
     <div class="z-10">
       <h1 class="text-2xl font-heading sm:text-4xl">Nathaniel MacKinlay</h1>
       <p class="mt-2 text-lg sm:text-xl">Software Engineer</p>
       <div class="mt-8 text-base sm:text-lg">
         <p>Hi, you can call me Nathy.</p>
 
-        <p>I'm a professional software engineer and an amatauer dad.</p>
+        <p>I'm a professional software engineer and an amatuer dad.</p>
       </div>
     </div>
   </div>

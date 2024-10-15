@@ -1,0 +1,25 @@
+---
+import { Experience } from "@/components/Experience";
+import { Education } from "@/components/Education";
+import { Skills } from "@/components/Skills";
+
+import BaseLayer from "@/layouts/BaseLayer.astro";
+---
+
+<BaseLayer meta={{ title: "Work Experience" }}>
+  <h1 class="mb-8 text-2xl font-heading sm:text-4xl">
+    Fullstack Software Engineer
+  </h1>
+
+  <div class="mb-10 text-base sm:text-lg flex flex-col gap-2">
+    <p>
+      I love creating simple & intuitive web and mobile experiences as well as
+      the services & infrastructure that power them.
+    </p>
+    <p>I moonlight as a game dev.</p>
+  </div>
+
+  <Skills client:load />
+  <Experience />
+  <Education />
+</BaseLayer>
