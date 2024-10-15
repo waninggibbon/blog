@@ -1,28 +1,13 @@
 import {
-  CircleHelp,
   MonitorCog,
   Palette,
-  Eclipse,
-  Keyboard,
-  LifeBuoy,
   LogOut,
-  Mail,
-  MessageSquare,
   Moon,
-  Plus,
-  PlusCircle,
   Settings,
   Shuffle,
   Sun,
-  User,
-  UserPlus,
-  Users,
   Wrench,
 } from "lucide-react";
-
-import { useState, useEffect } from "react";
-
-//set primary color in css variables set by class
 
 import config from "@/config";
 import {
@@ -33,7 +18,6 @@ import {
   DropdownMenuLabel,
   DropdownMenuPortal,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
@@ -65,6 +49,7 @@ export const SiteSettings = () => {
 
   const handleThemeSelection = (theme: string) => {
     const prev = localStorage.getItem("theme") ?? config.theme;
+    if (prev === theme) return;
     if (theme !== "random") {
       localStorage.setItem("theme", theme);
 
