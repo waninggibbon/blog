@@ -23,8 +23,10 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useState } from "react";
 
 export const SiteSettings = () => {
+  const [dropDownOpen, setDropDownOpen] = useState(false);
   const handleModeSelection = (mode: "dark" | "light" | "system") => {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
@@ -73,8 +75,14 @@ export const SiteSettings = () => {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+    <DropdownMenu
+      open={dropDownOpen}
+      onOpenChange={(isOpen) => setDropDownOpen(isOpen)}
+    >
+      <DropdownMenuTrigger
+        asChild
+        onClick={() => setDropDownOpen((prev) => !prev)}
+      >
         <button>
           <Settings className="m500:h-4 m500:w-4 stroke-text h-6 w-6 align-middle" />
         </button>
