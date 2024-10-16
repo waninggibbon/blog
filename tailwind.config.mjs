@@ -1,4 +1,6 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import typography from "@tailwindcss/typography";
+import tailwindScrollbar from "tailwind-scrollbar";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -53,7 +55,25 @@ export default {
         w500: { max: "500px" },
         w400: { max: "400px" },
       },
+      typography: (theme) => ({
+        lightMode: {
+          css: {
+            "--tw-prose-kbd": theme("colors.text"),
+            "--tw-prose-quote-borders": theme("colors.text"),
+            "--tw-prose-bullets": theme("colors.text"),
+            "--tw-prose-code": theme("colors.text"),
+          },
+        },
+        darkMode: {
+          css: {
+            "--tw-prose-kbd": theme("colors.darkText"),
+            "--tw-prose-quote-borders": theme("colors.darkText"),
+            "--tw-prose-bullets": theme("colors.darkText"),
+            "--tw-prose-code": theme("colors.darkText"),
+          },
+        },
+      }),
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), typography, tailwindScrollbar],
 };
