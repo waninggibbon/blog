@@ -25,6 +25,7 @@ export const Nav = ({ pathName }: Props) => {
       text: "Work",
     },
   ];
+  console.log(pathName);
 
   return (
     <div className="fixed left-0 top-5 z-50 w-full">
@@ -36,7 +37,7 @@ export const Nav = ({ pathName }: Props) => {
               className={clsx(
                 "hover:border-border dark:hover:border-darkBorder rounded-base border-2 px-2 py-1 transition-colors",
                 pathName === link.path
-                  ? "border-border dark:border-darkBorder"
+                  ? "border-transparent border-b-border dark:border-b-darkBorder"
                   : "border-transparent"
               )}
               href={link.path}

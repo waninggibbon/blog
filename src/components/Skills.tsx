@@ -30,6 +30,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { SmartTooltipContent, SmartTooltipTrigger } from "./ui/smart-tooltip";
 
 const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
   [
@@ -128,10 +129,10 @@ export const Skills = () => {
                 return (
                   <TooltipProvider key={id}>
                     <Tooltip>
-                      <TooltipTrigger asChild>
+                      <SmartTooltipTrigger asChild>
                         <skill.icon className="h-8 w-8" title="" />
-                      </TooltipTrigger>
-                      <TooltipContent>{skill.skill}</TooltipContent>
+                      </SmartTooltipTrigger>
+                      <SmartTooltipContent>{skill.skill}</SmartTooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 );
