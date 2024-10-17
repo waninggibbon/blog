@@ -24,13 +24,13 @@ import {
   SiAdobecreativecloud,
 } from "@icons-pack/react-simple-icons";
 
+import { TooltipProvider } from "@/components/ui/tooltip";
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { SmartTooltipContent, SmartTooltipTrigger } from "./ui/smart-tooltip";
+  SmartTooltip,
+  SmartTooltipContent,
+  SmartTooltipTrigger,
+  TouchProvider,
+} from "./ui/smart-tooltip";
 
 const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
   [
@@ -114,33 +114,35 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
 
 export const Skills = () => {
   return (
-    <div className="mb-16">
-      <h2 className="mb-8 text-xl font-heading sm:text-2xl">Skills</h2>
+    <TouchProvider>
+      <div className="mb-16">
+        <h2 className="mb-8 text-xl font-heading sm:text-2xl">Skills</h2>
 
-      {SKILLS.map((item, id) => {
-        return (
-          <div key={id}>
-            <h3 className="mb-4 text-lg font-heading sm:text-xl">
-              {item.field}
-            </h3>
+        {SKILLS.map((item, id) => {
+          return (
+            <div key={id}>
+              <h3 className="mb-4 text-lg font-heading sm:text-xl">
+                {item.field}
+              </h3>
 
-            <div className="mb-10 flex flex-wrap gap-5">
-              {item.skills.map((skill, id) => {
-                return (
-                  <TooltipProvider key={id}>
-                    <Tooltip>
-                      <SmartTooltipTrigger asChild>
-                        <skill.icon className="h-8 w-8" title="" />
-                      </SmartTooltipTrigger>
-                      <SmartTooltipContent>{skill.skill}</SmartTooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                );
-              })}
+              <div className="mb-10 flex flex-wrap gap-5">
+                {item.skills.map((skill, id) => {
+                  return (
+                    <TooltipProvider key={id}>
+                      <SmartTooltip>
+                        <SmartTooltipTrigger asChild>
+                          <skill.icon className="h-8 w-8" title="" />
+                        </SmartTooltipTrigger>
+                        <SmartTooltipContent>{skill.skill}</SmartTooltipContent>
+                      </SmartTooltip>
+                    </TooltipProvider>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </TouchProvider>
   );
 };

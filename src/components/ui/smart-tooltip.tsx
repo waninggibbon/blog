@@ -27,7 +27,7 @@ export const TouchProvider = (props: PropsWithChildren) => {
   return <TouchContext.Provider value={isTouch} {...props} />;
 };
 
-export const HybridTooltip = (props: TooltipProps & PopoverProps) => {
+export const SmartTooltip = (props: TooltipProps & PopoverProps) => {
   const isTouch = useTouch();
 
   return isTouch ? <Popover {...props} /> : <Tooltip {...props} />;
@@ -51,7 +51,7 @@ export const SmartTooltipContent = (
   const isTouch = useTouch();
 
   return isTouch ? (
-    <PopoverContent {...props} />
+    <PopoverContent side="top" {...props} />
   ) : (
     <TooltipContent {...props} />
   );

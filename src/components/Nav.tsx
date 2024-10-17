@@ -1,10 +1,7 @@
 "use client";
 
-// import { Link } from "next-view-transitions";
-// import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { SiteSettings } from "./SiteSettings";
-// import { ThemeSwitcher } from "./theme-switcher";
 
 type Props = {
   pathName: string;
@@ -25,7 +22,6 @@ export const Nav = ({ pathName }: Props) => {
       text: "Work",
     },
   ];
-  console.log(pathName);
 
   return (
     <div className="fixed left-0 top-5 z-50 w-full">
@@ -36,8 +32,8 @@ export const Nav = ({ pathName }: Props) => {
               key={link.path}
               className={clsx(
                 "hover:border-border dark:hover:border-darkBorder rounded-base border-2 px-2 py-1 transition-colors",
-                pathName === link.path
-                  ? "border-transparent border-b-border dark:border-b-darkBorder"
+                pathName === link.path || pathName === link.path + "/"
+                  ? "border-border dark:border-darkBorder"
                   : "border-transparent"
               )}
               href={link.path}
