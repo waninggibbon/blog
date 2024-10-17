@@ -25,10 +25,10 @@ export default {
 
         // themes
         goblin: "#00FF00",
-        paladin: "#00e1ff",
-        necromancer: "#bd52eb",
-        tiefling: "#FF0000",
-        barbarian: "#ffaa00",
+        nesssie: "#00e1ff",
+        mothman: "#bd52eb",
+        jackalope: "#FF0000",
+        squatch: "#ffaa00",
       },
       borderRadius: {
         base: "px",

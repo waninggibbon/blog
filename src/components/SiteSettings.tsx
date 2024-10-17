@@ -61,11 +61,11 @@ export const SiteSettings = () => {
     }
 
     const themes = [
-      "barbarian",
-      "paladin",
+      "squatch",
+      "nesssie",
       "goblin",
-      "necromancer",
-      "tiefling",
+      "mothman",
+      "jackalope",
     ].filter((theme) => theme != prev);
 
     const randomTheme = themes[Math.floor(Math.random() * themes.length)];
@@ -127,28 +127,28 @@ export const SiteSettings = () => {
                   <span>Goblin</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  onClick={() => handleThemeSelection("paladin")}
+                  onClick={() => handleThemeSelection("nesssie")}
                 >
-                  <div className="mr-2 h-4 w-4 border-text border-2 bg-paladin rounded-full" />
-                  <span>Paladin</span>
+                  <div className="mr-2 h-4 w-4 border-text border-2 bg-nesssie rounded-full" />
+                  <span>Nesssie</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  onClick={() => handleThemeSelection("necromancer")}
+                  onClick={() => handleThemeSelection("mothman")}
                 >
-                  <div className="mr-2 h-4 w-4 border-text border-2 bg-necromancer rounded-full" />
-                  <span>Necromancer</span>
+                  <div className="mr-2 h-4 w-4 border-text border-2 bg-mothman rounded-full" />
+                  <span>Mothman</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  onClick={() => handleThemeSelection("tiefling")}
+                  onClick={() => handleThemeSelection("jackalope")}
                 >
-                  <div className="mr-2 h-4 w-4 border-text border-2 bg-tiefling rounded-full" />
-                  <span>Tiefling</span>
+                  <div className="mr-2 h-4 w-4 border-text border-2 bg-jackalope rounded-full" />
+                  <span>Jackalope</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  onClick={() => handleThemeSelection("barbarian")}
+                  onClick={() => handleThemeSelection("squatch")}
                 >
-                  <div className="mr-2 h-4 w-4 border-text border-2 bg-barbarian rounded-full" />
-                  <span>Barbarian</span>
+                  <div className="mr-2 h-4 w-4 border-text border-2 bg-squatch rounded-full" />
+                  <span>Squatch</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => {
