@@ -27,7 +27,7 @@ export default {
         goblin: "#00FF00",
         nesssie: "#00e1ff",
         mothman: "#bd52eb",
-        jackalope: "#FF0000",
+        chupacabra: "#FF0000",
         squatch: "#ffaa00",
       },
       borderRadius: {

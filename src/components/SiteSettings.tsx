@@ -65,7 +65,7 @@ export const SiteSettings = () => {
       "nesssie",
       "goblin",
       "mothman",
-      "jackalope",
+      "chupacabra",
     ].filter((theme) => theme != prev);
 
     const randomTheme = themes[Math.floor(Math.random() * themes.length)];
@@ -139,10 +139,10 @@ export const SiteSettings = () => {
                   <span>Mothman</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  onClick={() => handleThemeSelection("jackalope")}
+                  onClick={() => handleThemeSelection("chupacabra")}
                 >
-                  <div className="mr-2 h-4 w-4 border-text border-2 bg-jackalope rounded-full" />
-                  <span>Jackalope</span>
+                  <div className="mr-2 h-4 w-4 border-text border-2 bg-chupacabra rounded-full" />
+                  <span>Chupacabra</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleThemeSelection("squatch")}
