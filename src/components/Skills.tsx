@@ -22,6 +22,7 @@ import {
   SiAseprite,
   SiAmazongames,
   SiAdobecreativecloud,
+  SiExpo,
 } from "@icons-pack/react-simple-icons";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -46,6 +47,7 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
         { skill: "webpack", icon: SiWebpack },
         { skill: "astro", icon: SiAstro },
         { skill: "vite", icon: SiVite },
+        { skill: "expo", icon: SiExpo },
       ],
     },
     {

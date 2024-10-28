@@ -9,8 +9,8 @@ const EDUCATION: {
     school: "Arizona State University",
     degree: "MS - Computer Science",
     GPA: "3.61",
-    startDate: "December 2022",
-    endDate: "December 2020",
+    startDate: "Jan 2021",
+    endDate: "December 2022",
   },
   {
     school: "Arizona State University",
