@@ -16,13 +16,14 @@ import {
   SiAmazonwebservices,
   SiOpenjdk,
   SiSpring,
-  SiUnity,
-  SiSharp,
   SiBlender,
   SiAseprite,
   SiAmazongames,
   SiAdobecreativecloud,
   SiExpo,
+  SiUnrealengine,
+  SiCplusplus,
+  SiExpress,
 } from "@icons-pack/react-simple-icons";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -66,6 +67,10 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
           icon: SiAmazonwebservices,
         },
         {
+          skill: "express.js",
+          icon: SiExpress,
+        },
+        {
           skill: "spring",
           icon: SiSpring,
         },
@@ -87,12 +92,12 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
       field: "Games",
       skills: [
         {
-          skill: "unity",
-          icon: SiUnity,
+          skill: "unreal engine",
+          icon: SiUnrealengine,
         },
         {
-          skill: "c#",
-          icon: SiSharp,
+          skill: "c++",
+          icon: SiCplusplus,
         },
         {
           skill: "blender",
