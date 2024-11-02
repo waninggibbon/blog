@@ -1,5 +1,5 @@
 ---
-title: "Making of this blog"
+title: "Making this blog"
 description: "The behind the scenes look that no one asked for."
 pubDate: "Oct 27 2024"
 tags: ["astro.js", "typescript", "react"]
