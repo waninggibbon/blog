@@ -7,7 +7,7 @@ tags: ["astro.js", "typescript", "react"]
 
 ## Background
 
-Creating a blog has been on my todo list for awhile, mostly because I suffer from grandiose delusions and think my opinion matters more than it actually does. If you're in a similar boat and aren't sure how to get started, then this article will hopefully provide you with some reasonable recommendations
+Creating a blog has been on my todo list for awhile, mostly because I suffer from grandiose delusions and think my opinion matters more than it actually does. If you're in a similar boat and aren't sure how to get started, then this article will hopefully provide you with some reasonable recommendations.
 
 ## Exploring tech stacks
 
@@ -49,5 +49,10 @@ I'm a web dev and web devs love using as many libraries as possible so let's tal
 
 - [react.js](https://react.dev/): used to create some of the more interactive components, although they could have been easily created in astro templates I just prefer using React once I have to start handling state and [astro's island architecture](https://docs.astro.build/en/concepts/islands/) reduces the overhead of bringing in a big library like React.
 - [tailwind](https://tailwindcss.com/): Class name based styling. I still have mixed feelings about tailwind. My brain still works in vanilla CSS but I'm giving tailwind a chance mostly so I can write about it in some future blog post so feel free to skip this one.
+- [mdx](https://mdxjs.com/): Combines the best of markdown and jsx, making writing blog posts with code bocks or embedded react components a breeze.
 
 Those are the major players though I also used [shadcn/ui](https://ui.shadcn.com/) and took visual inspiration from [neobrutalism-components](https://github.com/ekmas/neobrutalism-components). Feel free to skip these as well, but I would strongly recommend using Radix (the accessibility library shadcn/ui is built on) or something similar since it is unfortunately too easy to make an inaccessible website by mistake. This does not mean you can opt out of being up to date on your [WCAG standards](https://www.w3.org/WAI/standards-guidelines/wcag/) though!
+
+## Final thoughts
+
+Regardless of wether you use astro, if you're thinking about making a blog you should quit procrastinating and do it. Having somewhere to dump your thoughts creates an interactive journal where you can review the things you were learning or thinking about at different stages of life.
