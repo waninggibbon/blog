@@ -1,14 +1,12 @@
 ---
-import config from "@/config";
-import { getCollection } from "astro:content";
-
 import { Button } from "@/components/ui/button.tsx";
 
 import BaseLayer from "@/layouts/BaseLayer.astro";
 import PostPreview from "@/components/PostPreview.astro";
+import { getPublishedPosts } from "@/content/util";
 
-const allPosts = await getCollection("posts");
-const sortedPosts = allPosts.sort(
+const publishedPosts = await getPublishedPosts();
+const sortedPosts = publishedPosts.sort(
   (a, b) =>
     new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
 );
