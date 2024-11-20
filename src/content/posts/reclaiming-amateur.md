@@ -1,6 +1,6 @@
 ---
 title: "Reclaiming 'amateur'"
-description: "Taking a second look at one of the most misunderstood words in the english language."
+description: "Taking a look at one of the most misunderstood words in the english language."
 pubDate: "Oct 14 2024"
 tags: ["non-tech", "philosophy", "opinion"]
 ---

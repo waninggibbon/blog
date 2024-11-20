@@ -83,7 +83,7 @@ export const SiteSettings = () => {
         asChild
         onClick={() => setDropDownOpen((prev) => !prev)}
       >
-        <button>
+        <button aria-label="open settings">
           <Settings className="m500:h-4 m500:w-4 stroke-text h-6 w-6 align-middle" />
         </button>
       </DropdownMenuTrigger>
