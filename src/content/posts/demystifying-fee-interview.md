@@ -5,13 +5,6 @@ pubDate: "Nov 19 2024"
 tags: ["career", "interview-prep"]
 ---
 
-Portions:
-
-1. Web fundamentals
-2. Algorithms
-3. Component building
-4. System design
-
 ## Overview
 
 Coding interviews are the worst. The 6 hours of onsite interviews are too long and the 60+ hours of studying required beforehand are certainly too long. However, the purpose of this article is _not_ to say that "coding interviews are broken"; in fact I think they are one of the last bastions holding back a swamp of nepotism from flooding the last bit of hope that tech is still a meritocracy (but that is a rant for another day). No, the purpose of this article is to say that while coding interviews mostly suck, front end interviews mostly suck the least.
