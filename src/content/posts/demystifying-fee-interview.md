@@ -1,6 +1,6 @@
 ---
 title: "Demystifying the front end interview"
-description: "Part 1 in a series on breaking the front end interview survival guide."
+description: "The front end interview survival guide, part 1."
 pubDate: "Nov 19 2024"
 tags: ["career", "interview-prep"]
 ---
@@ -24,5 +24,7 @@ Now that you know your mileage may vary, let's talk about the component parts of
 - **System design:** Architecting complex, performant web applications; usually these questions are only asked for more senior positions. Unlike traditionally SDE system design interviews, these interviews typically focus on designing an application from the client side perspective. For example, breaking down the process of building a complex UI like the Facebook news feed or a Pinterest board. Again, we will take a deeper dive on this topic but as a sneak preview, the [YouTube channel "Front End Engineer"](https://www.youtube.com/@FrontEndEngineer) has a great series of examples and is criminally under-viewed.
 
 - **Data structures & algorithms:** The bread and butter of the quintessential coding interview. These questions are what people typically think of when they think of coding interviews (inverting binary trees, finding the shortest paths, locating the total number of single moms in your area, etc.). Essentially, applying specific data structures & algorithms to the type of questions you'd find on [leetcode.com](https://leetcode.com/). Like I mentioned earlier, this is typically a small portion of the interview compared to SDE interviews (e.g. only 1-2 rounds of 6 as opposed to 4-5), but it is still present. Practice makes perfect here, but there is a tried and true method here to make sure that practice is efficient.
+
+- **Behavioral:** Basically exactly what most people outside of the tech world expect an interview to be; e.g. "tell me about a time you dealt with a difficult coworker". For us closet dwelling, introverted gremlins, this can actually be the hardest part of the interview because it feels so subjective compared to the rest of the interview. Unsurprisingly, just like any other part of the interview, the best way to get good at this is to practice
 
 And that's really it. Front end interviews can feel like the wild west due to the breadth of topics which are up for grabs, but they are relatively applied and accessible. Stay tuned, in next week's article we will break down front end system design, with DSA, web dev fundamentals, and even component building shortly thereafter.
