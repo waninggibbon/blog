@@ -53,11 +53,11 @@ const {
     <ViewTransitions />
   </head>
   <body
-    class="bg-bg font-base text-text dark:bg-darkBg dark:text-darkText z-10 scrollbar scrollbar-thumb-main"
+    class="bg-bg font-base text-text dark:bg-darkBg dark:text-darkText scrollbar scrollbar-thumb-main min-h-[100vh]"
   >
     <Nav client:only="react" pathName={Astro.url.pathname} />
     <main
-      class="mx-auto px-5 max-w-[900px] min-h-[calc(100dvh-70px)] py-10 pt-[120px] w500:min-h-[calc(100dvh-70px)] w400:pt-[140px]"
+      class="mx-auto px-5 max-w-[900px] min-h-[calc(100dvh-70px)] py-10 pt-[120px] w500:min-h-[calc(100dvh-70px)] w400:pt-[140px] z-10 bg-transparent relative"
     >
       <slot />
     </main>
