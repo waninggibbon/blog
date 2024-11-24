@@ -24,6 +24,11 @@ import {
   SiUnrealengine,
   SiCplusplus,
   SiExpress,
+  SiDotnetHex,
+  SiDotnet,
+  SiSharp,
+  SiPython,
+  SiUnity,
 } from "@icons-pack/react-simple-icons";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -37,31 +42,33 @@ import {
 const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
   [
     {
-      field: "Frontend",
+      field: "Languages",
       skills: [
         { skill: "html", icon: SiHtml5 },
         { skill: "css", icon: SiCss3 },
         { skill: "javascript", icon: SiJavascript },
         { skill: "typescript", icon: SiTypescript },
+        { skill: "c#", icon: SiSharp },
+        { skill: "Python", icon: SiPython },
+        {
+          skill: "postgresql",
+          icon: SiPostgresql,
+        },
+      ],
+    },
+    {
+      field: "Technologies",
+      skills: [
         { skill: "react", icon: SiReact },
         { skill: "tailwind", icon: SiTailwindcss },
         { skill: "webpack", icon: SiWebpack },
         { skill: "astro", icon: SiAstro },
         { skill: "vite", icon: SiVite },
-        { skill: "expo", icon: SiExpo },
-      ],
-    },
-    {
-      field: "Backend",
-      skills: [
         {
           skill: "nodejs",
           icon: SiNodedotjs,
         },
-        {
-          skill: "java",
-          icon: SiOpenjdk,
-        },
+
         {
           skill: "aws",
           icon: SiAmazonwebservices,
@@ -70,50 +77,14 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
           skill: "express.js",
           icon: SiExpress,
         },
+
         {
-          skill: "spring",
-          icon: SiSpring,
-        },
-        {
-          skill: "postgresql",
-          icon: SiPostgresql,
-        },
-        {
-          skill: "mongodb",
-          icon: SiMongodb,
+          skill: "unity",
+          icon: SiUnity,
         },
         {
           skill: "docker",
           icon: SiDocker,
-        },
-      ],
-    },
-    {
-      field: "Games",
-      skills: [
-        {
-          skill: "unreal engine",
-          icon: SiUnrealengine,
-        },
-        {
-          skill: "c++",
-          icon: SiCplusplus,
-        },
-        {
-          skill: "blender",
-          icon: SiBlender,
-        },
-        {
-          skill: "asesprite",
-          icon: SiAseprite,
-        },
-        {
-          skill: "amazon gamelift",
-          icon: SiAmazongames,
-        },
-        {
-          skill: "adobe creative cloud",
-          icon: SiAdobecreativecloud,
         },
       ],
     },
