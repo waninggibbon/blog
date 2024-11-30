@@ -37,6 +37,7 @@ export const Nav = ({ pathName }: Props) => {
                   : "border-transparent"
               )}
               href={link.path}
+              data-astro-prefetch
             >
               {link.text}
             </a>

@@ -26,4 +26,5 @@ export default defineConfig({
     mdx(),
   ],
   site: "https://nathy.dev/",
+  prefetch: true,
 });
