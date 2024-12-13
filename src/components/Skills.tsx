@@ -5,30 +5,19 @@ import {
   SiDocker,
   SiHtml5,
   SiJavascript,
-  SiMongodb,
   SiNodedotjs,
   SiPostgresql,
   SiReact,
-  SiVite,
   SiWebpack,
   SiTailwindcss,
   SiTypescript,
   SiAmazonwebservices,
   SiOpenjdk,
-  SiSpring,
-  SiBlender,
-  SiAseprite,
-  SiAmazongames,
-  SiAdobecreativecloud,
-  SiExpo,
   SiUnrealengine,
   SiCplusplus,
   SiExpress,
-  SiDotnetHex,
-  SiDotnet,
-  SiSharp,
-  SiPython,
-  SiUnity,
+  SiSpring,
+  SiLinux,
 } from "@icons-pack/react-simple-icons";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -44,16 +33,16 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
     {
       field: "Languages",
       skills: [
-        { skill: "html", icon: SiHtml5 },
-        { skill: "css", icon: SiCss3 },
+        { skill: "c++", icon: SiCplusplus },
         { skill: "javascript", icon: SiJavascript },
         { skill: "typescript", icon: SiTypescript },
-        { skill: "c#", icon: SiSharp },
-        { skill: "Python", icon: SiPython },
+        { skill: "java", icon: SiOpenjdk },
         {
           skill: "postgresql",
           icon: SiPostgresql,
         },
+        { skill: "html", icon: SiHtml5 },
+        { skill: "css", icon: SiCss3 },
       ],
     },
     {
@@ -63,7 +52,7 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
         { skill: "tailwind", icon: SiTailwindcss },
         { skill: "webpack", icon: SiWebpack },
         { skill: "astro", icon: SiAstro },
-        { skill: "vite", icon: SiVite },
+        { skill: "spring", icon: SiSpring },
         {
           skill: "nodejs",
           icon: SiNodedotjs,
@@ -79,12 +68,16 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
         },
 
         {
-          skill: "unity",
-          icon: SiUnity,
+          skill: "unreal",
+          icon: SiUnrealengine,
         },
         {
           skill: "docker",
           icon: SiDocker,
+        },
+        {
+          skill: "linux",
+          icon: SiLinux,
         },
       ],
     },
