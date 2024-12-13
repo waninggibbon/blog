@@ -49,7 +49,6 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
       field: "Technologies",
       skills: [
         { skill: "react", icon: SiReact },
-        { skill: "tailwind", icon: SiTailwindcss },
         { skill: "webpack", icon: SiWebpack },
         { skill: "astro", icon: SiAstro },
         { skill: "spring", icon: SiSpring },
