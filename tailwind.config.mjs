@@ -62,10 +62,10 @@ export default {
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(calc(-50% - 4px))" },
         },
         "scroll-reverse": {
-          "0%": { transform: "translateX(-50%)" },
+          "0%": { transform: "translateX(calc(-50% - 4px))" },
           "100%": { transform: "translateX(0%)" },
         },
       },

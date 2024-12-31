@@ -10,20 +10,43 @@ const sortedPosts = publishedPosts.sort(
   (a, b) =>
     new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
 );
+
+const tags = [...new Set(publishedPosts.map((post) => post.data.tags).flat())];
 ---
 
 <BaseLayer meta={{ title: "Blog", description: "All blog posts" }}>
-  <Button className="mb-4"><a href="/tags">Search by topic</a></Button>
-  <div class="w700:grid-cols-1 grid grid-cols-2 gap-5">
-    {
-      sortedPosts.map((post) => (
-        <PostPreview
-          url={post.slug}
-          title={post.data.title}
-          description={post.data.description}
-          pubDate={post.data.pubDate}
-        />
-      ))
-    }
+  <div class="flex flex-col gap-4">
+    <h2 class="text-2xl font-heading font-pixel tracking-wide sm:text-3xl">
+      Filter by tag
+    </h2>
+
+    <div class="mt-4 flex flex-wrap gap-4">
+      {
+        tags.map((tag) => (
+          <a
+            class="inline-block rounded-base border-2 border-border bg-main dark:bg-darkMain px-3 py-1 text-base font-pixel text-text no-underline dark:border-darkBorder w500:text-sm"
+            href={`/tags/${tag}`}
+          >
+            #{tag}
+          </a>
+        ))
+      }
+    </div>
+    <h2 class="text-2xl font-heading font-pixel tracking-wide sm:text-3xl">
+      All posts
+    </h2>
+
+    <div class="w700:grid-cols-1 grid grid-cols-2 gap-5">
+      {
+        sortedPosts.map((post) => (
+          <PostPreview
+            url={post.slug}
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+          />
+        ))
+      }
+    </div>
   </div>
 </BaseLayer>
