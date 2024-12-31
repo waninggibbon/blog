@@ -147,7 +147,6 @@ export const Skills = () => {
 
               <div className="mb-10 flex flex-wrap gap-5">
                 {item.skills.map((skill, id) => {
-                  console.log(skill);
                   return (
                     <TooltipProvider key={id}>
                       <SmartTooltip>

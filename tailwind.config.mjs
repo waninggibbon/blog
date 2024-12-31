@@ -62,16 +62,26 @@ export default {
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(calc(-50% - 4px))" },
+          "100%": { transform: "translateX(-100%)" },
         },
-        "scroll-reverse": {
-          "0%": { transform: "translateX(calc(-50% - 4px))" },
+        scroll2: {
+          "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
+        },
+        reverseScroll: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        reverseScroll2: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
         },
       },
       animation: {
-        scroll: "scroll 40s linear infinite",
-        "scroll-reverse": "scroll-reverse 40s linear infinite",
+        scroll: "scroll 20s linear infinite",
+        scroll2: "scroll2 20s linear infinite",
+        reverseScroll: "reverseScroll 20s linear infinite",
+        reverseScroll2: "reverseScroll2 20s linear infinite",
       },
       typography: (theme) => ({
         lightMode: {

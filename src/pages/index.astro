@@ -5,26 +5,22 @@ import "@/styles/globals.css";
 import BaseLayer from "../layouts/BaseLayer.astro";
 import { Link } from "@/components/ui/link";
 import Avatar from "@/components/ui/avatar.astro";
+import { Banner } from "@/components/ui/banner";
 ---
 
 <BaseLayer meta={{ title: config.title }}>
   <div class="flex flex-col justify-between h-full w-full">
-    <div class="flex overflow-hidden">
-      <div
-        class="text-3xl font-pixel sm:text-5xl font-heading mb-8 animate-scroll flex gap-2"
-      >
-        <h1 class="text-nowrap m-0">
-          NATHANIEL MACKINLAY // DAD // PROGRAMMER // CRYPTOZOOLOGIST // PANCAKE
-          ENTHUSIAST // NATHANIEL MACKINLAY // DAD // PROGRAMMER //
-          CRYPTOZOOLOGIST // PANCAKE ENTHUSIAST //
-        </h1>
-        <h1 class="text-nowrap m-0">
-          NATHANIEL MACKINLAY // DAD // PROGRAMMER // CRYPTOZOOLOGIST // PANCAKE
-          ENTHUSIAST // NATHANIEL MACKINLAY // DAD // PROGRAMMER //
-          CRYPTOZOOLOGIST // PANCAKE ENTHUSIAST //
-        </h1>
-      </div>
-    </div>
+    <Banner
+      direction="normal"
+      delimiter="//"
+      items={[
+        "NATHANIEL MACKINLAY",
+        "DAD",
+        "PROGRAMMER",
+        "CRYPTOZOOLOGIST",
+        "PANCAKE ENTHUSIAST",
+      ]}
+    />
     <div class="flex flex-row sm:gap-16 gap-4 items-center w800:flex-col">
       <Avatar />
       <div class="mt-8 w800:mt-4 text-base sm:text-xl">
@@ -36,21 +32,16 @@ import Avatar from "@/components/ui/avatar.astro";
         </p>
       </div>
     </div>
-    <div class="flex overflow-hidden">
-      <div
-        class="text-3xl font-pixel sm:text-5xl font-heading mb-8 animate-scroll-reverse flex gap-2"
-      >
-        <h1 class="text-nowrap m-0">
-          NATHANIEL MACKINLAY // DAD // PROGRAMMER // CRYPTOZOOLOGIST // PANCAKE
-          ENTHUSIAST // NATHANIEL MACKINLAY // DAD // PROGRAMMER //
-          CRYPTOZOOLOGIST // PANCAKE ENTHUSIAST //
-        </h1>
-        <h1 class="text-nowrap m-0">
-          NATHANIEL MACKINLAY // DAD // PROGRAMMER // CRYPTOZOOLOGIST // PANCAKE
-          ENTHUSIAST // NATHANIEL MACKINLAY // DAD // PROGRAMMER //
-          CRYPTOZOOLOGIST // PANCAKE ENTHUSIAST //
-        </h1>
-      </div>
-    </div>
+    <Banner
+      direction="reverse"
+      items={[
+        "NATHANIEL MACKINLAY",
+        "DAD",
+        "PROGRAMMER",
+        "CRYPTOZOOLOGIST",
+        "PANCAKE ENTHUSIAST",
+      ]}
+      delimiter="//"
+    />
   </div>
 </BaseLayer>
