@@ -9,19 +9,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        main: "var(--main)",
         overlay: "rgba(0,0,0,0.8)", // background color overlay for alert dialogs, modals, etc.
 
         // light mode
         bg: "var(--bg)",
         text: "#000",
         border: "#000",
+        main: "#ffaa00",
 
         // dark mode
         darkBg: "var(--darkBg)",
         darkText: "#eeefe9",
         darkBorder: "#000",
         secondaryBlack: "#1b1b1b",
+        darkMain: "#bd52eb",
 
         // themes
         goblin: "#00FF00",
@@ -49,6 +50,7 @@ export default {
       },
       fontFamily: {
         sans: ["Red Hat Text Variable", ...defaultTheme.fontFamily.sans],
+        pixel: ["VT323", ...defaultTheme.fontFamily.mono],
       },
       screens: {
         w700: { max: "700px" },

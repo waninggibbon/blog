@@ -13,8 +13,6 @@ import {
   SiTypescript,
   SiAmazonwebservices,
   SiOpenjdk,
-  SiUnrealengine,
-  SiCplusplus,
   SiExpress,
   SiSpring,
   SiLinux,
@@ -33,7 +31,6 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
     {
       field: "Languages",
       skills: [
-        { skill: "c++", icon: SiCplusplus },
         { skill: "javascript", icon: SiJavascript },
         { skill: "typescript", icon: SiTypescript },
         { skill: "java", icon: SiOpenjdk },
@@ -66,10 +63,6 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
           icon: SiExpress,
         },
 
-        {
-          skill: "unreal",
-          icon: SiUnrealengine,
-        },
         {
           skill: "docker",
           icon: SiDocker,

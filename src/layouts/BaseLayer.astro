@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 import "../styles/globals.css";
 import "@fontsource-variable/red-hat-text";
+import "@fontsource/vt323";
 
 import Meta from "@/components/Meta.astro";
 
@@ -15,7 +16,6 @@ const {
 
 <script>
   import config from "@/config";
-
   function displayMode() {
     const preference = window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
@@ -52,14 +52,16 @@ const {
     <Meta title={title} description={description} />
     <ViewTransitions />
   </head>
-  <body
-    class="bg-bg font-base text-text dark:bg-darkBg dark:text-darkText scrollbar scrollbar-thumb-main min-h-[100vh]"
-  >
-    <Nav client:only="react" pathName={Astro.url.pathname} />
-    <main
-      class="mx-auto px-5 max-w-[900px] min-h-[calc(100dvh-70px)] py-10 pt-[120px] w500:min-h-[calc(100dvh-70px)] w400:pt-[140px] z-10 bg-transparent relative"
+  <body class="bg-main dark:bg-darkMain font-base h-screen">
+    <div
+      class="flex flex-col-reverse sm:gap-10 gap-2 h-full w-full sm:p-10 p-4 sm:flex-row"
     >
-      <slot />
-    </main>
+      <Nav client:only="react" pathName={Astro.url.pathname} />
+      <main
+        class="bg-bg border-border border-4 p-10 w-full max-w-[1200px] h-full max-h-screen overflow-y-auto scrollbar scrollbar-thumb-main dark:bg-darkBg dark:scrollbar-thumb-darkMain dark:scrollbar-track-white scrollbar-track-border"
+      >
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

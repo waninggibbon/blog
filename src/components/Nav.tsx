@@ -1,50 +1,63 @@
 "use client";
 
-import clsx from "clsx";
-import { SiteSettings } from "./SiteSettings";
+import type { ReactNode } from "react";
+import { ThemeToggler } from "./ThemeToggler";
+import { BriefcaseBusiness, Gamepad2, ScrollText } from "lucide-react";
 
 type Props = {
   pathName: string;
 };
 
-export const Nav = ({ pathName }: Props) => {
-  const links = [
-    {
-      path: "/",
-      text: "Home",
-    },
-    {
-      path: "/blog",
-      text: "Blog",
-    },
-    {
-      path: "/work",
-      text: "Work",
-    },
-  ];
+const NavLink = ({
+  activePath,
+  path,
+  children,
+}: {
+  activePath: string;
+  path: string;
+  children: ReactNode;
+}) => {
+  const classMod =
+    activePath === path ? "bg-text text-darkText" : "bg-transparent text-text";
 
   return (
-    <div className="fixed left-0 top-5 z-50 w-full">
-      <nav className="text-text border-border dark:border-darkBorder shadow-light dark:shadow-dark mx-auto flex w-max gap-5 rounded-base border-2 bg-main p-2.5 px-5 text-sm font-base sm:text-base w450:gap-4">
-        {links.map((link) => {
-          return (
-            <a
-              key={link.path}
-              className={clsx(
-                "hover:border-border dark:hover:border-darkBorder rounded-base border-2 px-2 py-1 transition-colors",
-                pathName === link.path || pathName === link.path + "/"
-                  ? "border-border dark:border-darkBorder"
-                  : "border-transparent"
-              )}
-              href={link.path}
-              data-astro-prefetch
-            >
-              {link.text}
-            </a>
-          );
-        })}
-        <SiteSettings />
-      </nav>
-    </div>
+    <a
+      className={["text-center sm:p-4 p-2 w-full rounded-base", classMod].join(
+        " "
+      )}
+      href={path}
+      data-astro-prefetch
+    >
+      {children}
+    </a>
+  );
+};
+
+export const Nav = ({ pathName }: Props) => {
+  return (
+    <nav className="text-text flex flex-col sm:w-[300px] w-full bg-main dark:bg-darkMain font-base gap-2 justify-between font-pixel text-xl sm:p-0 px-10">
+      <ul className="text-text flex sm:flex-col flex-row gap-5">
+        <NavLink path="/" activePath={pathName}>
+          <div className="flex flex-row gap-2 justify-center">
+            <Gamepad2 />
+            <span>HOME</span>
+          </div>
+        </NavLink>
+        <NavLink path="/blog" activePath={pathName}>
+          <div className="flex flex-row gap-2 justify-center">
+            <ScrollText />
+            <span>BLOG</span>
+          </div>
+        </NavLink>
+        <NavLink path="/work" activePath={pathName}>
+          <div className="flex flex-row gap-2 justify-center">
+            <BriefcaseBusiness />
+            <span>WORK</span>
+          </div>
+        </NavLink>
+      </ul>
+
+      <ThemeToggler />
+    </nav>
   );
 };
