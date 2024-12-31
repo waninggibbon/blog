@@ -70,8 +70,8 @@ export default {
         },
       },
       animation: {
-        scroll: "scroll 25s linear infinite",
-        "scroll-reverse": "scroll-reverse 25s linear infinite",
+        scroll: "scroll 40s linear infinite",
+        "scroll-reverse": "scroll-reverse 40s linear infinite",
       },
       typography: (theme) => ({
         lightMode: {
