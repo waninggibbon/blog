@@ -22,7 +22,7 @@ export default {
         darkText: "#eeefe9",
         darkBorder: "#000",
         secondaryBlack: "#1b1b1b",
-        darkMain: "#bd52eb",
+        darkMain: "#9500FF",
 
         // themes
         goblin: "#00FF00",

@@ -8,6 +8,7 @@ import Meta from "@/components/Meta.astro";
 
 import { Nav } from "@/components/Nav";
 import config from "@/config";
+import { Background } from "@/components/ui/background";
 
 const {
   meta: { title, description = config.description },
@@ -49,9 +50,20 @@ const {
     <Meta title={title} description={description} />
     <ViewTransitions />
   </head>
-  <body class="bg-main dark:bg-darkMain font-base h-dvh transition-all">
+  <body class="bg-main dark:bg-darkMain font-base h-dvh">
+    <div class="pointer-events-none overflow-clip">
+      <Background
+        className="absolute inset-0 z-0"
+        squareSize={4}
+        gridGap={6}
+        color="#3CFF00"
+        maxOpacity={0.5}
+        flickerChance={0.1}
+        client:only="react"
+      />
+    </div>
     <div
-      class="flex flex-col-reverse sm:gap-10 gap-2 h-full w-full sm:p-10 p-4 sm:flex-row"
+      class="flex flex-col-reverse sm:gap-10 gap-2 h-full w-full sm:p-10 p-4 sm:flex-row z-10 relative"
     >
       <Nav client:only="react" pathName={Astro.url.pathname} />
       <main

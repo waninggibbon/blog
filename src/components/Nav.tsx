@@ -11,52 +11,61 @@ type Props = {
 const NavLink = ({
   activePath,
   path,
-  children,
+  icon,
+  text,
 }: {
   activePath: string;
   path: string;
-  children: ReactNode;
+  icon: ReactNode;
+  text: ReactNode;
 }) => {
-  const classMod =
-    activePath === path || activePath === path + "/"
-      ? "bg-darkBg text-darkText"
-      : "bg-transparent text-text";
+  const isActivePath = activePath === path || activePath === path + "/";
+  const classMod = isActivePath ? "bg-darkBg text-darkText" : "text-text";
 
   return (
-    <a
+    <li
       className={["text-center sm:p-4 p-2 w-full rounded-base", classMod].join(
         " "
       )}
-      href={path}
-      data-astro-prefetch
     >
-      {children}
-    </a>
+      <a href={path} data-astro-prefetch>
+        <div
+          className={[
+            "flex flex-row gap-2 justify-center ",
+            isActivePath ? "bg-darkBg" : "bg-main dark:bg-darkMain",
+          ].join(" ")}
+        >
+          {icon}
+          <span>{text}</span>
+        </div>
+      </a>
+    </li>
   );
 };
 
 export const Nav = ({ pathName }: Props) => {
   return (
-    <nav className="text-text flex flex-col sm:w-[300px] w-full font-base gap-2 justify-between font-pixel text-xl sm:p-0 px-10">
+    <nav className="text-text flex flex-col sm:w-[300px] w-full font-base gap-2 justify-between font-pixel text-xl sm:p-0 px-10 transition-none">
       <ul className="text-text flex sm:flex-col flex-row gap-5">
-        <NavLink path="/" activePath={pathName}>
-          <div className="flex flex-row gap-2 justify-center">
-            <Gamepad2 />
-            <span>HOME</span>
-          </div>
-        </NavLink>
-        <NavLink path="/blog" activePath={pathName}>
-          <div className="flex flex-row gap-2 justify-center">
-            <ScrollText />
-            <span>BLOG</span>
-          </div>
-        </NavLink>
-        <NavLink path="/work" activePath={pathName}>
-          <div className="flex flex-row gap-2 justify-center">
-            <BriefcaseBusiness />
-            <span>WORK</span>
-          </div>
-        </NavLink>
+        <NavLink
+          path="/"
+          activePath={pathName}
+          icon={<Gamepad2 />}
+          text="HOME"
+        />
+        <NavLink
+          path="/blog"
+          activePath={pathName}
+          icon={<ScrollText />}
+          text="BLOG"
+        />
+
+        <NavLink
+          path="/work"
+          activePath={pathName}
+          icon={<BriefcaseBusiness />}
+          text="Work"
+        />
       </ul>
 
       <ThemeToggler />
