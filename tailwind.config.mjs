@@ -1,6 +1,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import typography from "@tailwindcss/typography";
 import tailwindScrollbar from "tailwind-scrollbar";
+import { transform } from "typescript";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -56,6 +57,21 @@ export default {
         w700: { max: "700px" },
         w500: { max: "500px" },
         w400: { max: "400px" },
+        w800: { max: "800px" },
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "scroll-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+      },
+      animation: {
+        scroll: "scroll 25s linear infinite",
+        "scroll-reverse": "scroll-reverse 25s linear infinite",
       },
       typography: (theme) => ({
         lightMode: {

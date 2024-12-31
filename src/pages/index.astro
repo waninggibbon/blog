@@ -4,21 +4,53 @@ import config from "@/config";
 import "@/styles/globals.css";
 import BaseLayer from "../layouts/BaseLayer.astro";
 import { Link } from "@/components/ui/link";
+import Avatar from "@/components/ui/avatar.astro";
 ---
 
 <BaseLayer meta={{ title: config.title }}>
-  <div class="flex flex-col h-full w-full">
-    <h1 class="text-3xl font-pixel sm:text-5xl font-heading">
-      Nathaniel MacKinlay
-    </h1>
-    <div class="mt-8 text-base sm:text-lg">
-      <p>Hi, you can call me Nathy.</p>
-
-      <p>
-        I'm a professional software engineer and an <Link
-          href="/reclaiming-amateur">amateur</Link
-        > game developer.
-      </p>
+  <div class="flex flex-col justify-between h-full w-full">
+    <div class="flex overflow-hidden">
+      <div
+        class="text-3xl font-pixel sm:text-5xl font-heading mb-8 animate-scroll flex gap-0"
+      >
+        <h1 class="text-nowrap m-0">
+          NATHANIEL MACKINLAY // DAD // PROGRAMMER // CRYPTOZOOLOGIST // PANCAKE
+          ENTHUSIAST // NATHANIEL MACKINLAY // DAD // PROGRAMMER //
+          CRYPTOZOOLOGIST // PANCAKE ENTHUSIAST //
+        </h1>
+        <h1 class="text-nowrap m-0">
+          NATHANIEL MACKINLAY // DAD // PROGRAMMER // CRYPTOZOOLOGIST // PANCAKE
+          ENTHUSIAST // NATHANIEL MACKINLAY // DAD // PROGRAMMER //
+          CRYPTOZOOLOGIST // PANCAKE ENTHUSIAST //
+        </h1>
+      </div>
+    </div>
+    <div class="flex flex-row sm:gap-8 gap-4 items-center w800:flex-col">
+      <Avatar />
+      <div class="mt-8 w800:mt-4 text-base sm:text-lg">
+        <p>Hi, you can call me Nathy.</p>
+        <p>
+          I'm a professional software engineer and an <Link
+            href="/reclaiming-amateur">amateur</Link
+          > game developer.
+        </p>
+      </div>
+    </div>
+    <div class="flex overflow-hidden">
+      <div
+        class="text-3xl font-pixel sm:text-5xl font-heading mb-8 animate-scroll-reverse flex gap-0"
+      >
+        <h1 class="text-nowrap m-0">
+          NATHANIEL MACKINLAY // DAD // PROGRAMMER // CRYPTOZOOLOGIST // PANCAKE
+          ENTHUSIAST // NATHANIEL MACKINLAY // DAD // PROGRAMMER //
+          CRYPTOZOOLOGIST // PANCAKE ENTHUSIAST //
+        </h1>
+        <h1 class="text-nowrap m-0">
+          NATHANIEL MACKINLAY // DAD // PROGRAMMER // CRYPTOZOOLOGIST // PANCAKE
+          ENTHUSIAST // NATHANIEL MACKINLAY // DAD // PROGRAMMER //
+          CRYPTOZOOLOGIST // PANCAKE ENTHUSIAST //
+        </h1>
+      </div>
     </div>
   </div>
 </BaseLayer>
