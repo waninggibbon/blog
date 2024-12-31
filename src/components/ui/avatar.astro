@@ -1,10 +1,9 @@
 ---
-import { Image } from "astro:assets";
-import avatar from "../../images/avatar.png";
+
 ---
 
-<Image
-  src={avatar}
-  alt="Pixel art depiction of nathy."
-  class="border-main dark:bg-darkText dark:border-darkMain border-8 rounded-full aspect-square grow-0"
-/>
+<div
+  class="border-main bg-main dark:bg-darkMain overflow-hidden dark:border-darkMain border-8 rounded-full grow-0"
+>
+  <img src={"/images/avatar.webp"} alt="Pixel art depiction of nathy." />
+</div>

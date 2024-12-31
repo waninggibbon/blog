@@ -64,7 +64,7 @@ export const Nav = ({ pathName }: Props) => {
           path="/work"
           activePath={pathName}
           icon={<BriefcaseBusiness />}
-          text="WORK"
+          text="RESUME"
         />
       </ul>
 

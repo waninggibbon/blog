@@ -38,6 +38,7 @@ export const ThemeToggler = () => {
       onClick={() => toggleTheme()}
       name="theme-toggler"
       id="themeToggler"
+      aria-label="toggle-theme"
     >
       {theme === "dark" ? <Moon /> : <Sun />}
     </Button>
