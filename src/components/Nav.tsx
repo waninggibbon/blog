@@ -45,7 +45,7 @@ const NavLink = ({
 
 export const Nav = ({ pathName }: Props) => {
   return (
-    <nav className="text-text flex flex-col sm:w-[300px] w-full font-base gap-2 justify-between font-pixel text-xl sm:p-0 px-10 transition-none">
+    <div className="text-text flex flex-col w-full sm:h-full font-heading gap-2 justify-between font-pixel text-xl sm:p-0 px-10 transition-none">
       <ul className="text-text flex sm:flex-col flex-row gap-5">
         <NavLink
           path="/"
@@ -69,6 +69,6 @@ export const Nav = ({ pathName }: Props) => {
       </ul>
 
       <ThemeToggler />
-    </nav>
+    </div>
   );
 };

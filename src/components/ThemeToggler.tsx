@@ -33,7 +33,11 @@ export const ThemeToggler = () => {
   };
 
   return (
-    <Button className="w-max mx-auto" onClick={() => toggleTheme()}>
+    <Button
+      className="w-max mx-auto"
+      onClick={() => toggleTheme()}
+      name="theme-toggler"
+    >
       {theme === "dark" ? <Moon /> : <Sun />}
     </Button>
   );

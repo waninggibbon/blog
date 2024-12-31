@@ -65,7 +65,9 @@ const {
     <div
       class="flex flex-col-reverse sm:gap-10 gap-2 h-full w-full sm:p-10 p-4 sm:flex-row z-10 relative"
     >
-      <Nav client:only="react" pathName={Astro.url.pathname} />
+      <nav class="sm:w-[300px] w-full sm:h-full">
+        <Nav client:only="react" pathName={Astro.url.pathname} />
+      </nav>
       <main
         class="bg-bg border-border border-4 p-5 sm:p-10 w-full max-w-[1200px] h-full max-h-screen overflow-y-auto scrollbar scrollbar-thumb-main dark:bg-darkBg dark:scrollbar-thumb-darkMain"
       >
