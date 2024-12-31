@@ -24,7 +24,9 @@ const EDUCATION: {
 export const Education = () => {
   return (
     <div className="mb-16">
-      <h2 className="mb-8 text-xl font-heading sm:text-2xl">Education</h2>
+      <h2 className="mb-8 text-xl font-heading font-pixel sm:text-2xl">
+        Education
+      </h2>
 
       {EDUCATION.map((edu, id) => {
         return (

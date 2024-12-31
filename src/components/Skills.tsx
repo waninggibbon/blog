@@ -79,7 +79,9 @@ export const Skills = () => {
   return (
     <TouchProvider>
       <div className="mb-16">
-        <h2 className="mb-8 text-xl font-heading sm:text-2xl">Skills</h2>
+        <h2 className="mb-8 text-xl font-heading font-pixel sm:text-2xl">
+          Skills
+        </h2>
 
         {SKILLS.map((item, id) => {
           return (
