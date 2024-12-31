@@ -18,7 +18,9 @@ const NavLink = ({
   children: ReactNode;
 }) => {
   const classMod =
-    activePath === path ? "bg-text text-darkText" : "bg-transparent text-text";
+    activePath === path || activePath === path + "/"
+      ? "bg-text text-darkText"
+      : "bg-transparent text-text";
 
   return (
     <a
