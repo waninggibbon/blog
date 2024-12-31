@@ -10,7 +10,7 @@ export const Banner = ({
   return (
     <div className="relative flex w-full overflow-x-hidden text-3xl font-pixel sm:text-5xl font-heading whitespace-nowrap">
       <div
-        className={`mb-8 ${direction === "normal" ? "animate-scroll" : "animate-reverseScroll"}`}
+        className={` ${direction === "normal" ? "animate-scroll mb-8" : "animate-reverseScroll mt-8"}`}
       >
         {items
           .flatMap((item) => [item, delimiter])
@@ -24,7 +24,7 @@ export const Banner = ({
       </div>
 
       <div
-        className={`absolute top-0 ${direction === "normal" ? "animate-scroll2" : "animate-reverseScroll2"} whitespace-nowrap`}
+        className={`absolute ${direction === "normal" ? "animate-scroll2 top-0 " : "animate-reverseScroll2 top-8"} whitespace-nowrap`}
       >
         {items
           .flatMap((item) => [item, delimiter])
