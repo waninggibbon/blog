@@ -9,7 +9,6 @@ type Config = {
     dark: ThemeObjectOrShikiThemeName;
     light: ThemeObjectOrShikiThemeName;
   };
-  theme: string;
 };
 
 export default {
@@ -21,5 +20,4 @@ export default {
     dark: "dracula",
     light: "min-light",
   },
-  theme: "squatch",
 } satisfies Config;

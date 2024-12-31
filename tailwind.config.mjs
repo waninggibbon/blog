@@ -12,13 +12,13 @@ export default {
         overlay: "rgba(0,0,0,0.8)", // background color overlay for alert dialogs, modals, etc.
 
         // light mode
-        bg: "var(--bg)",
+        bg: "#fefae0",
         text: "#000",
         border: "#000",
         main: "#ffaa00",
 
         // dark mode
-        darkBg: "var(--darkBg)",
+        darkBg: "#000",
         darkText: "#eeefe9",
         darkBorder: "#000",
         secondaryBlack: "#1b1b1b",

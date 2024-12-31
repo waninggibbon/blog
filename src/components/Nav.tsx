@@ -19,7 +19,7 @@ const NavLink = ({
 }) => {
   const classMod =
     activePath === path || activePath === path + "/"
-      ? "bg-text text-darkText"
+      ? "bg-darkBg text-darkText"
       : "bg-transparent text-text";
 
   return (
@@ -37,7 +37,7 @@ const NavLink = ({
 
 export const Nav = ({ pathName }: Props) => {
   return (
-    <nav className="text-text flex flex-col sm:w-[300px] w-full bg-main dark:bg-darkMain font-base gap-2 justify-between font-pixel text-xl sm:p-0 px-10">
+    <nav className="text-text flex flex-col sm:w-[300px] w-full font-base gap-2 justify-between font-pixel text-xl sm:p-0 px-10">
       <ul className="text-text flex sm:flex-col flex-row gap-5">
         <NavLink path="/" activePath={pathName}>
           <div className="flex flex-row gap-2 justify-center">
