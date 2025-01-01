@@ -31,11 +31,11 @@ const NavLink = ({
       <a href={path} data-astro-prefetch>
         <div
           className={[
-            "flex flex-row gap-2 justify-center ",
+            "flex flex-row gap-2 justify-center items-center",
             isActivePath ? "bg-darkBg" : "bg-main dark:bg-darkMain",
           ].join(" ")}
         >
-          {icon}
+          <span className="hidden sm:block">{icon}</span>
           <span>{text}</span>
         </div>
       </a>
