@@ -6,4 +6,4 @@ tags:
   - another-tag
 description: Testing out the new blog publisher
 ---
-bababooie
+bababooie - published
