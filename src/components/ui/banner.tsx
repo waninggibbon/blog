@@ -21,11 +21,29 @@ export const Banner = ({
               </span>
             );
           })}
+        {items
+          .flatMap((item) => [item, delimiter])
+          .map((item) => {
+            return (
+              <span key={item} className="mx-2">
+                {item}
+              </span>
+            );
+          })}
       </div>
 
       <div
         className={`absolute top-0 ${direction === "normal" ? "animate-scroll2" : "animate-reverseScroll2"} whitespace-nowrap`}
       >
+        {items
+          .flatMap((item) => [item, delimiter])
+          .map((item) => {
+            return (
+              <span key={item} className="mx-2">
+                {item}
+              </span>
+            );
+          })}
         {items
           .flatMap((item) => [item, delimiter])
           .map((item) => {
