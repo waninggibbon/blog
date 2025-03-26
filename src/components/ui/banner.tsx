@@ -8,7 +8,7 @@ export const Banner = ({
   delimiter?: string;
 }) => {
   return (
-    <div className="relative flex w-full overflow-x-hidden text-3xl font-pixel sm:text-5xl font-heading whitespace-nowrap">
+    <div className="relative flex w-full overflow-hidden text-3xl font-pixel sm:text-5xl font-heading whitespace-nowrap">
       <div
         className={` ${direction === "normal" ? "animate-scroll" : "animate-reverseScroll"}`}
       >
