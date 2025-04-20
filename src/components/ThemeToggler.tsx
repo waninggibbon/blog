@@ -1,13 +1,4 @@
-import {
-  MonitorCog,
-  Palette,
-  LogOut,
-  Moon,
-  Settings,
-  Shuffle,
-  Sun,
-  Wrench,
-} from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 
 import config from "@/config";
 import { Button } from "./ui/button";
@@ -34,7 +25,6 @@ export const ThemeToggler = () => {
 
   return (
     <Button
-      className="w-max mx-auto"
       onClick={() => toggleTheme()}
       name="theme-toggler"
       id="themeToggler"
